@@ -1,1 +1,48 @@
-archivoParaPruebas.txt
+hasta el capitulo 3 del libro estuve viendo:
+# El sangrado: se recomienda 4 espacios por nivel de sangrado.
+# Se recomienda que cada linea tenga un maximo de 80 caracteres
+1) print(imprime mensajes en la pantalla)
+2) creacion de variables (no pueden empezar con numeros)
+3)creacion de arrays(listas) lista=[]
+4) como agregar contenido dentro de estas con metodos como:
+
+(append):agrega contenido en la ultima posicion del arrays
+
+(insert):agregamos el contenido en el indice que quedamos del arrays
+
+(pop):sacamos el ultimo indice del array y lo guardamos en una variable para usar despues
+
+(remove):eliminamos por completo el array o indice que queramos
+
+(sorted):ordenamos de forma temporal el array en orden alfabetico
+
+(sort):ordenamos de forma permanente el array en orden alfabetico
+
+(reverse):invertimos el orden de los indices
+
+5) El metodo LEN para poder saber la longitud de un array
+
+En el capitulo "5" aprendi:
+
+1)bucle FOR  (for in) (por cada elemento en la lista da una vuelta)
+
+2) el metodo in RANGE (,) el cual toma dos argumentos el primero desde donde empieza y el segundo donde termina
+
+3) metodos:
+sum: suma todos los valores de la lista
+min: devuelve el valor minimo de una lista
+max: devuelve el valor maximo de una lista
+
+4) introduccion a lineas de compresion ejm: square[valor**3 for valor in range (1:11)]
+version sin compresion:
+cuadrado=[]
+for valor in range(1,11):
+    cuadrados=valor ** 2
+    cuadrado.append(cuadrados)
+5) delimitadores: [0:3] de esta manera junto a un print podria mostrar los elementos del primero al tercero
+
+6) usar un for junto a un delimitador: for jugador in jugadores[0:3] al hacer un print solo recorreria 3 veces
+
+7) para copiar todo el contenido de una lista a otra usamos [:] seria igual a seleccionar todo
+
+8) TUPLAS: se crean igual que una lista pero en vez de [corchetes] se usa (parentesis ) y son inmutables,para recorrer una tupla no hace falta el uso de delimitadores[0,2]
