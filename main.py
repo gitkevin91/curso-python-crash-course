@@ -314,3 +314,42 @@ for comidas in menu:#para recorrer una tupla no hace falta poner de donde a dond
 menu=("pollo","strudel","asado","sashimi")#tupla modificada con nuevos valores
 for nuevomenu in menu:
     print(nuevomenu)
+
+    # capitulo 5
+cars =['audi','bmw','suzuki','toyota']
+
+for car in cars:
+    if(car =='bmw'):
+        print (car.upper())
+    else:
+        print(car.title())    
+
+ep=1
+cap=2
+if ep==1 and cap==2:
+    print("el and funciono bien")
+  
+if ep==1 or cap==33:
+    print ("el or tambien funciono")
+
+baneados=["sara","lola","ailu"]
+usuario="caro"
+observados=[usuario]
+if"sara" in baneados:
+      print("estas baneada")
+
+
+if usuario not in baneados:
+    print(f"{usuario.title()},no estas baneada")
+
+    if usuario in observados:
+         print("te estamos vigilando")
+elif usuario == "caro" or baneados[0]=="sara":
+    print("hola caro")
+ 
+    
+else:
+    print("estas baneada ") 
+
+    
+    

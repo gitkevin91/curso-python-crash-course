@@ -22,7 +22,7 @@ hasta el capitulo 3 del libro estuve viendo:
 
 5) El metodo LEN para poder saber la longitud de un array
 
-En el capitulo "5" aprendi:
+En el capitulo "4" aprendi:
 
 1)bucle FOR  (for in) (por cada elemento en la lista da una vuelta)
 
@@ -46,3 +46,30 @@ for valor in range(1,11):
 7) para copiar todo el contenido de una lista a otra usamos [:] seria igual a seleccionar todo
 
 8) TUPLAS: se crean igual que una lista pero en vez de [corchetes] se usa (parentesis ) y son inmutables,para recorrer una tupla no hace falta el uso de delimitadores[0,2]
+
+ capitulo 5:
+
+ 1) sentencias if (basicamente lo mismo que en lenguajes c,javascript etc)
+ la gran diferencia con otros lenguajes es que aca no se encierra con parentesis sino que se hace sangria.
+ (!=) diferente de
+
+ 2)los operadores logicos and y or se escriben tal cual nada de usar simbologia: ||(or) , && (and) .
+
+3) palabra clave: IN se utiliza para comprobar que un dato se encuentre en un lugar por ej una lista.
+lista["auto","pizza","arbol","hoja"] 
+   if "auto" in lista:
+        true
+la palabra in le pide a python que comprueve que auto se encuentre en lista.
+
+4) palabra clave: NOT se utiliza para comprobar que un dato no se encuentre en un lugar
+baneados=["pedro","clara","tomas"]
+usuario="pedro"
+if usuario not in baneados:
+      print(f"{usuario.tittle},no esta baneado")
+
+
+5) sentencia ELSE: es lo mismo que otros lenguajes solo hay que colocarlo a la altura de la sangria del if
+
+6) sentencia ELIF : es igual a else if
+
+7)UPPER () Y LOWER() se usan para pasar el strig a mayuscula o minuscula sirve para hacer comparaciones de cadena que no deseas que juzgue con case sensitive
