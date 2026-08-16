@@ -73,3 +73,45 @@ if usuario not in baneados:
 6) sentencia ELIF : es igual a else if
 
 7)UPPER () Y LOWER() se usan para pasar el strig a mayuscula o minuscula sirve para hacer comparaciones de cadena que no deseas que juzgue con case sensitive
+
+Capitulo 6:
+
+1) diccionarios :
+ alien={'color':'negro'} es un conjunto de valores que van en pares clave/valor pueden agregarse la cantidad que queramos dentro del diccionario,para hacerlo tenemos que usar corchetes []: alien['altura'] = 100, podriamos inicializar un diccionario vacio: alien = {} y despues ir llenandolo: alien['puntos'] = 100 ,alien ['posicion_y'] = 0. 
+
+ 2) si quiero cambiar un valor solo tengo que asignarle el valor que quiero que tenga por ejemplo usaria  alien['color'] = blanco y asi pasaria de negro a blanco.
+
+3) si quiero eliminar un par clave/valor utilizo la sentencia DEL : del alien['puntos'] (el par clave/valor se elimina de manera permanente)
+
+4)diccionario de objetos similares 
+lenguajes_favoritos = {
+    'sara':'python',
+    'jen' : 'c',
+    'edward' :'python',
+    'phil' : 'rust',
+} de esta manera componemos una biblioteca de objetos similares importante usar los 4 espacios del sangrado (un nivel) y la coma al final de par clave/valor
+
+5) metodo GET() al configurar una variable get evitamos que salte un error si buscamos un dato y no existe ,lo hacemos asi: mi_lenguaje=lenguajes_favoritos.get('kevin','no existe ese usuario') el primer parametro seria para identificar lo que queremos buscar y el segundo seria para dar un mensaje,que es opcional
+
+6) pasar un valor por bucle: tenemos que inicializar un for con dos variables, uno para la clave y otro para el valor despues usamos el in la biblioteca y un .items() que lo que va hacer es devolver una secuencia de sentencias clave/valor  se escribiria asi:
+ for nombres,favoritos in lenguajes_favoritos.items():
+
+7) metodo KEYS() : si lo que queremos es solo que nos de la llave usamos keys():
+for nombres in lenguajes_favoritos.keys(): esto devolveria solo los nombres pero no los lenguajes esto hace lo mismo que si escribiera: for nombres in lenguajes_favoritos: 
+pero puede ayudar a hacer el codigo mas legible keys no es solo para bucles, en realidad devuelve una secuencia de todas las claves
+
+8) funcion sorted() : sorted en una funcion de ordenamiento donde podes pasar dos orgumentos por ejemplo : for lenguajes in sorted(lenguajes_favoritos,fav=len) de esta manera recorro dentro de lenguajes_favoritos lenguajes veces y en cada vuelta cuento la cantidad de caracteres con len,ordenando de menor a mayor cantidad de caracteres
+
+
+9) metodo values() : se usa para optener los valores de un diccionario sin sun nombres podemos hacerlo asi :
+ for lenguajes.lenguajes_favoritos,values():
+    print(lenguajes)  de esta manera extraemos cada valor y lo asignamos a lenguajes
+
+10) metodo SET():sirve para identificar los elementos unicos en una lista y crear un conjunto con ellas devolviendo una lista sin los elementos repetidos que habia antes y se usa asi:
+for lenguajes in set(lenguajes_favoritos.values()):
+    print(lenguajes.tittle())
+
+11) ANIDACION: lista o elemento con varias diccionarios o una lista dentro de una diccionario:
+aliens=[alien_0,alien_1,alien_2] SE USAN CORCHETES!
+for alien in aliens:
+    print(alien)  

@@ -73,9 +73,18 @@ else:#el else se ejecuta si la lista esta vacia
     print("la lista está vacía")
 #usar multiples listas en un for
 condimentos=['tomate','cebolla','ketchup','hongos']
-for condimentos in ingredientes_requeridos:
+for extra in ingredientes_requeridos:
     if condimentos in ingredientes_requeridos:
         print(f"añadiendo {condimentos} a la pizza")
     else:
         print(f"no tenemos {condimentos} disponible en este momento") 
 
+avariable_toppings=['queso','tomate','peperoni','salsa','anana']
+request_toppings=['tomate','papas fritas','queso','salsa']
+
+for request_toppings in request_toppings:
+
+     if request_toppings in avariable_toppings:
+         print(f"agregando {request_toppings}")
+     else:
+        print(f"no nos queda{request_toppings}")     
