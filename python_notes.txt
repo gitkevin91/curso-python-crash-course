@@ -6,19 +6,26 @@ hasta el capitulo 3 del libro estuve viendo:
 3)creacion de arrays(listas) lista=[]
 4) como agregar contenido dentro de estas con metodos como:
 
-(append):agrega contenido en la ultima posicion del arrays
+(append):agrega contenido en la ultima posicion del arrays:
+amigos.append("calidoscopio")
 
-(insert):agregamos el contenido en el indice que quedamos del arrays
+(insert):agregamos el contenido en el indice que quedamos del arrays:
+amigos.insert(0,"magui")
 
-(pop):sacamos el ultimo indice del array y lo guardamos en una variable para usar despues
+(pop):sacamos el ultimo indice del array y lo guardamos en una variable para usar despues:
+ciudades.pop()
 
-(remove):eliminamos por completo el array o indice que queramos
+(remove):eliminamos por completo el array o indice que queramos:
+motos.remove(futuraMoto)
 
-(sorted):ordenamos de forma temporal el array en orden alfabetico
+(sorted):ordenamos de forma temporal el array en orden alfabetico:
+sorted(lugares)
 
 (sort):ordenamos de forma permanente el array en orden alfabetico
+lugares.sort()
 
-(reverse):invertimos el orden de los indices
+(reverse):invertimos el orden de los indices:
+lugares.reverse()
 
 5) El metodo LEN para poder saber la longitud de un array
 
@@ -81,7 +88,9 @@ Capitulo 6:
 
  2) si quiero cambiar un valor solo tengo que asignarle el valor que quiero que tenga por ejemplo usaria  alien['color'] = blanco y asi pasaria de negro a blanco.
 
-3) si quiero eliminar un par clave/valor utilizo la sentencia DEL : del alien['puntos'] (el par clave/valor se elimina de manera permanente)
+3) si quiero eliminar un par clave/valor utilizo la sentencia DEL :
+ del alien['puntos'] 
+ (el par clave/valor se elimina de manera permanente)
 
 4)diccionario de objetos similares 
 lenguajes_favoritos = {
@@ -91,7 +100,9 @@ lenguajes_favoritos = {
     'phil' : 'rust',
 } de esta manera componemos una biblioteca de objetos similares importante usar los 4 espacios del sangrado (un nivel) y la coma al final de par clave/valor
 
-5) metodo GET() al configurar una variable get evitamos que salte un error si buscamos un dato y no existe ,lo hacemos asi: mi_lenguaje=lenguajes_favoritos.get('kevin','no existe ese usuario') el primer parametro seria para identificar lo que queremos buscar y el segundo seria para dar un mensaje,que es opcional
+5) metodo GET() al configurar una variable get evitamos que salte un error si buscamos un dato y no existe ,lo hacemos asi:
+ mi_lenguaje=lenguajes_favoritos.get('kevin','no existe ese usuario')
+ el primer parametro seria para identificar lo que queremos buscar y el segundo seria para dar un mensaje,que es opcional
 
 6) pasar un valor por bucle: tenemos que inicializar un for con dos variables, uno para la clave y otro para el valor despues usamos el in la biblioteca y un .items() que lo que va hacer es devolver una secuencia de sentencias clave/valor  se escribiria asi:
  for nombres,favoritos in lenguajes_favoritos.items():
@@ -115,3 +126,171 @@ for lenguajes in set(lenguajes_favoritos.values()):
 aliens=[alien_0,alien_1,alien_2] SE USAN CORCHETES!
 for alien in aliens:
     print(alien)  
+
+capitulo 7 :
+
+1)funcion INPUT ():
+funciona igual que en c, pausa el programa y espera que se ingrese algun dato y este es asignado a una variable: nombre = input("por favor indica tu nombre:")
+
+2) cadenas multilinea :se usan cuando queremos escribir instrucciones de mas de una linea
+prompt = "si me compartis tu nombre,puedo personalizar el mensaje que ves"
+prompt += "\n cual es tu nombre?"
+nombre = input(prompt)
+print(f"\n hola,{nombre}")
+>>> si me compartis tu nombre,puedo personalizar el mensaje que ves
+    cual es tu nombre? <<< kevin
+    hola kevin
+
+3) el operador modulo % : divide el numero entre otro y devuelve el resto,unicamente nos dice cual es el resto,por ejemplo si el numero es divisible por otro el resto es 0,de esta manera podemos identificar si un numero es par o impar.
+
+4) El Bucle WHILE: (MIENTRAS que) el bucle while se ejecuta mientras que una condicion sea true en forma de bucle
+
+5) banderas : bandera = true   while bandera : if numero!=4 print(perdiste) bandera= false (se detiene el while) la bandera en una manera de asegurar que un while se detenga por un problema controlado
+
+6) BREAK: se usa para detener un flujo en el programa,puede ser for,while,funciones,match (que  es switch en c)
+
+7)CONTINUE: si no queremos interrumpir una sentencia por completo sino que quremos que evalue algo y luego vuelva al principio del bucle para seguir ejecutando el resto del codigo usariamos CONTINUE para por ejemplo ver solo los numeros impares del 0 al 10:
+ current number =0
+while current number >10:
+    current number + =1
+    if current number% 2 == 0:
+        CONTINUE
+print(current number)                                                           
+
+8)DE ESTA MANERA PASAMOS UNA LISTA A OTRA USANDO WHILE:
+
+unconfirmed_users=['anna','pablo','diego','alan']
+
+confirmed_users=[]
+while unconfirmed_users:
+    current_users=unconfirmed_users.pop()#EN CADA VUELTA SACAMOS EL ULTIMO ELEMENTO Y LO GUARDAMOS EN CURRENT_USERS
+    print(f"verificando el usuario:{current_users.title()}")
+    confirmed_users.append(current_users)#EN CADA VUELTA AGARRAMOS EL ELEMENTO GUARDADO Y LO VOLVEMOS A AGUARDAR EN OTRA VARIABLE LLAMADA CONFIRMED_USERS
+print("\n LOS SIGUIENTES USUARIOS FUERON CONFIRMADOS:\n")
+for confirmed_users in confirmed_users:
+    print(confirmed_users.title())
+
+9)#ELIMINAR CON WHILE UN DATO QUE SE REPITE:
+animales=['gato','perro','pez','lagarto','gato','halcon','gato','caballo','mammut','gato']
+while 'gato' in animales:
+    animales.remove('gato')
+
+10)#RELLENAR UN DICCIONARIO CON LA ENTRADA DE UN USUARIO:
+respuestas={}
+encuesta_activa=True
+while encuesta_activa:
+#pide en nombre y la respuesta de la persona:
+    nombre=input("\ncual es tu nombre?")
+    respuesta=input("\ncual es tu montaña favorita?")
+    #guardo la respuesta en el diccionario
+    respuestas[nombre]=respuesta
+    #preguntar si alguien mas va hacer la encuensta:
+    repetir=input("te gustaria que otra persona responda? si/no\n")
+    if repetir=='no':
+        encuesta_activa=False
+#la encuesta esta completa y muestro los resultados:
+print("\nRESULTADO DE LA ENCUESTA:\n")
+for name,respuesta in respuestas.items():
+    print(f"{name}le gusta la montaña{respuesta}")
+
+CAPITULO 8  FUNCIONES)
+
+1) DEF usamos def para definir una funcion:
+def nueva_funcion():
+   print('hola soy una funcion')
+   #despues la llamamos usando el nombre de la funcion seguido de los parentesis:
+
+   nueva_funcion()
+
+2) Argumentos clave-valor: se usan para evitar que un argumento optenga por error el valor equivocado por ejmplo en la funcion anterior podria escribirse asi:
+ def nueva_funcion(nombre,apellido):
+    print(f"mi nombre es{nombre},y mi apellido es {apellido}")
+ de esta manera si llamo a la funcion y pongo:
+ nueva_funcion('garcia','kevin')
+ al imprimirse estarian los valores invertidos:
+ hola mi nombre es garcia y me apellido kevin,
+ para evitar eso usamos los argumentos clave-valor
+ nueva_funcion(nombre='kevin',apellido='garcia')
+ y de esta manera evitamos confuciones y le decimos a pythonexplicitamente que paramentro tiene que asociarse con cada argumento
+ nota: hay que usar los nombres exactos de los paramentros
+ 
+ 3)ejemplo de funcion que recorre una lista:
+ def grate_users(names):
+    "imprime un saludo sencillo para cada nombre de la lista"
+    for name in names:
+        mensaje=f"hola {name.title()} como estas?\n"
+        print(mensaje)
+user_names=['pedro','jeronimo','papanicolao']
+grate_users(user_names)
+
+4)ejemplo de una funcion que recorre una lista:
+
+#modificar una lista en una funcion:
+
+
+def print_models (modelos_noimpresos,modelos_impresos):
+    while modelos_noimpresos:
+        modelos_actuales=modelos_noimpresos.pop()
+        print(f"se acaba de imprimir el modelo: {modelos_actuales}")
+        modelos_impresos.append(modelos_actuales)
+
+def mostrar_impresos(modelos_impresos):
+    print ("modelos que fueron impresos:")
+    for modelos in modelos_impresos:
+       print(modelos)
+
+modelos_noimpresos=['robot','muñeca','engranaje']
+modelos_impresos=[]
+
+print_models(modelos_noimpresos,modelos_impresos)
+mostrar_impresos(modelos_impresos)
+
+5)funcion que NO modifica la lista:
+lo unico que hay que hacer es al llamar la funcion usamos[:] para hacer una copia de la lista en lugar de usar la lista original:
+
+print_models(modelos_noimpresos[:],modelos_impresos)
+de esta manera protejemos los datos de la lista original
+
+6) pasar un numero arbitrario de argumentos:
+def make_pizza (*toppings):
+    #imprime la lista de ingredientes solicitados
+    print(toppings)
+make_pizza('pepperoni')
+make_pizza('mushrooms','green peppers','extra chease')
+el asterisco en el nombre del parametro *toppings le indica a python que cree una tupla vacia llamada toppings,que contenga todos los valores que reciba esta funcion. la llamada a print() demuestra que python puede administrar una llamada a una funcion con un valor y una llamada con tres valores observe que python mete los argumentos en una tupla (una lista inmodificable) incluso aunque la funcion reciba un solo valor.
+
+7)mezclar argumentos posicionales y arbitrarios:
+def make_pizza(size,*toppings):
+    print(f"haciendo una pizza de tamaño:{size} con los siguientes toppings:")
+    for toppings in toppings:
+        print(f"-{toppings}")
+make_pizza(16,'pepperoni')
+make_pizza(18,'mushrooms','green pepers','extra cheese','tomato','extra tomato sauce')
+python asigna el primer valor que recibe y lo asigna al parametro size,todos los demas valores que sigan van a parar a la tupla toppings
+
+8)usar argumentos de palabra clave arbitrarias:
+#usar argumentos de palabra clave arbitrarios:
+ 
+def build_profile(first,last,**user_info):
+    #crea un diccionario con todo lo que sabemos del usuario.
+    user_info['first_name']=first
+    user_info['last_name']=last
+    return user_info
+user_profile = build_profile('albert','einstein',location ='princeton',fiel ='physics')
+print(user_profile)
+el doble asterisco antes del parametro**user_info hace que python  cree un diccionario vacio llamado user_info que contenga todos los pares clave-valor adicionales que la funcion reciba
+
+9)importar un modulo: primero en un archivo pizza.py hacemos la funcion:
+def make_pizza(size,*toppings):
+    #resume la pizza que estamos apunto de hacer.
+    print(f"vamos a hacer una pizza de tamaño:{size} con los siguientes toppings:\n")  
+    for toppings in toppings:
+        print(f"-{toppings}")     
+ despues en otro archivo diferente que se llame por ejemplo make_pizza.py:
+ hacemos el llamado a la funcion
+ import pizza
+pizza.make_pizza(16,'pepperoni')   
+pizza.make_piza(20,'muzzarella','tomate','albahca')  
+
+de esta manera podriamos usar todas las funiones disponibles dentro del programa:
+nombre_modulo.nombre_funcion()
