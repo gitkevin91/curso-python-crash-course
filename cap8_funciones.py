@@ -145,6 +145,6 @@ def make_pizza(size,*toppings):
         print(f"-{toppings}")     
 # ahora hacemos el archivo indepentendiente llamado make_pizza.py en el mismo direcctorio que pizza.py
 make_pizza.py
-import pizza
+import pizza 
 pizza.make_pizza(16,'pepperoni')   
 pizza.make_piza(20,'muzzarella','tomate','albahca')   
